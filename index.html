@@ -32,4 +32,18 @@
         var index = 0;
 
         // Reference to the display element and button
-        var
+        var display = document.getElementById('stringDisplay');
+        var button = document.getElementById('cycleButton');
+
+        // Event listener for the button click
+        button.addEventListener('click', function() {
+            // Increment index and wrap around if necessary
+            index = (index + 1) % strings.length;
+
+            // Update the displayed string
+            display.textContent = strings[index];
+        });
+    </script>
+
+</body>
+</html>
